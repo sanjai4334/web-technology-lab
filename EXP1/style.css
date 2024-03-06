@@ -3,9 +3,15 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   font-family: monospace;
+}
+
+.flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.vertical {
   flex-direction: column;
 }
 
@@ -13,17 +19,7 @@ a {
   color: #fff;
 }
 
-#main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 #personal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
 }
 

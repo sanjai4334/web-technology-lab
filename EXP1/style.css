@@ -1,0 +1,33 @@
+body {
+  background-image: linear-gradient(#43cea2, #185a9d);
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  color: #fff;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#personal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+#about {
+  width: 48%;
+}

@@ -1,0 +1,35 @@
+.nav-links a {
+    border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+border-bottom: 3px solid white;
+}
+
+#home {
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../assets/bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home .text-center {
+    width: 900px;
+}
+
+#home .text-center a {
+    background-color: rgba(255, 255, 255, .75);
+    color: rgba(0, 0, 0, .75);
+}
+
+#home .text-center a:hover {
+    
+    background-color: rgba(255, 255, 255, .5);
+    color: black;
+}

@@ -3,12 +3,13 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   font-family: monospace;
+  margin: 50px;
 }
 
 .flex {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  justify-content: left;
 }
 
 .vertical {
@@ -19,11 +20,20 @@ a {
   color: #fff;
 }
 
+p, li {
+  font-size: large;
+}
+
+h2 {
+  color: black;
+}
+
 #personal {
   gap: 20px;
 }
 
 
 #about {
-  width: 48%;
+  width: 80%;
+  text-justify: auto;
 }

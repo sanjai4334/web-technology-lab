@@ -1,6 +1,7 @@
 function generateBill() {
     let name = document.getElementById("name").value;
     let pan = document.getElementById("pan").value;
+    let year = document.getElementById("taxYear").value;
     let salary = Number(document.getElementById("salary").value) || 0;
     let rent = Number(document.getElementById("rent").value) || 0;
     let otherIncomes = Number(document.getElementById("otherIncomes").value) || 0;
@@ -11,6 +12,7 @@ function generateBill() {
 
     document.getElementById("bill-name").value = name;
     document.getElementById("bill-pan").value = pan;
+    document.getElementById("bill-taxYear").value = year;
     
     let totalIncome = salary + rent + otherIncomes;
     document.getElementById("bill-totalIncome").value = "₹ " + totalIncome;
@@ -23,6 +25,8 @@ function generateBill() {
     document.getElementById("bill-totalDeduction").value = "₹ " + totalDeduction;
 
     let taxableIncome = totalIncome - standardDeduction - totalDeduction;
+    if (taxableIncome < 0) 
+        taxableIncome = 0;
     document.getElementById("bill-taxableIncome").value = "₹ " + taxableIncome;
 
     let taxRate = 0;

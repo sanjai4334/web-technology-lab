@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1 class="text-center">Income Tax Calculator</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <h2 class="row m-3">Basic Details</h2>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Name</span>
+                        <input type="text" class="form-control col" id="name">
+                    </div>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">PAN Number</span>
+                        <input type="text" class="form-control col" id="pan">
+                    </div>
+                    <h2 class="row m-3">Income Details</h2>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Income From Salary</span>
+                        <input type="number" class="form-control col" id="salary">
+                    </div>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Income From Rent</span>
+                        <input type="number" class="form-control col" id="rent">
+                    </div>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Income from other sources</span>
+                        <input type="number" class="form-control col" id="otherIncomes">
+                    </div>
+                    <h2 class="row m-3">Deductions</h2>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Insurance</span>
+                        <input type="number" class="form-control col" id="insurance">
+                    </div>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Tuition Fees</span>
+                        <input type="number" class="form-control col" id="tuition">
+                    </div>
+                    <div class="input-group row m-3">
+                        <span class="input-group-text col">Other Deductions</span>
+                        <input type="number" class="form-control col" id="otherDeductions">
+                    </div>
+                    <div class="row m-3 justify-content-center ">
+                        <div class="col-4">
+                            <button onclick="generateBill()" class="btn btn-primary">Generate Bill</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="container">
+                    <h2 class="row m-4 ">Tax Summary</h2>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Name</span>
+                        <input type="text" class="form-control col" id="bill-name" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">PAN Number</span>
+                        <input type="text" class="form-control col" id="bill-pan" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Total Income</span>
+                        <input type="text" class="form-control col" id="bill-totalIncome" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Standard Deduction</span>
+                        <input type="text" class="form-control col" id="bill-standardDeduction" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Total Deduction</span>
+                        <input type="text" class="form-control col" id="bill-totalDeduction" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Taxable Income</span>
+                        <input type="text" class="form-control col" id="bill-taxableIncome" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Tax Rate</span>
+                        <input type="text" class="form-control col" id="bill-taxRate" readonly>
+                    </div>
+                    <div class="input-group row m-4">
+                        <span class="input-group-text col">Tax Payable</span>
+                        <input type="text" class="form-control col" id="bill-taxPayable" readonly>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,14 @@
 function generateBill() {
     let name = document.getElementById("name").value;
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
     let pan = document.getElementById("pan").value;
+    if (!pan) {
+        alert("Please enter your PAN Number.");
+        return;
+    }
     let year = document.getElementById("taxYear").value;
     let salary = Number(document.getElementById("salary").value) || 0;
     let rent = Number(document.getElementById("rent").value) || 0;
@@ -8,6 +16,11 @@ function generateBill() {
     let insurance = Number(document.getElementById("insurance").value) || 0;
     let tuition = Number(document.getElementById("tuition").value) || 0;
     let otherDeductions = Number(document.getElementById("otherDeductions").value) || 0;
+
+    if (rent + salary + otherIncomes <=0) {
+        alert("Please enter valid income details.");
+        return;
+    }
 
 
     document.getElementById("bill-name").value = name;

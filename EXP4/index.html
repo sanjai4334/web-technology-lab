@@ -15,6 +15,7 @@
         <div class="shadow p-3 border rounded row my-3">
             <label class="col form" for="name">Name</label>
             <input class="col form-control " type="text" id="name" placeholder="Enter name">
+            <span class="text-danger" id="nameError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
@@ -30,6 +31,7 @@
                     <label class="form-check-label" for="genderFemale">Female</label>
                 </div>
             </div>
+            <span class="text-danger" id="genderError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
@@ -57,7 +59,7 @@
                     </label>
                 </div>
             </div>
-
+            <span class="text-danger" id="languageError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
@@ -69,31 +71,37 @@
                 <option>District 3</option>
                 <option>District 4</option>
             </select>
+            <span class="text-danger" id="districtError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
             <label class="col form" for="address">Address</label>
             <textarea class="form-control col" id="address" rows="3"></textarea>
+            <span class="text-danger" id="addressError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
             <label class="col form" for="email">Email address</label>
             <input class="col form-control " type="email" id="email" placeholder="Enter email">
+            <span class="text-danger" id="emailError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
             <label class="col form" for="mobile">Mobile Number</label>
             <input class="col form-control " type="tel" id="mobile" placeholder="Enter mobile number">
+            <span class="text-danger" id="mobileError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3">
             <label class="col form" for="username">Username</label>
             <input class="col form-control " type="text" id="username" placeholder="Enter username">
+            <span class="text-danger" id="usernameError"></span>
         </div>
 
         <div class="shadow p-3 border rounded row my-3 form-group">
             <label class="col-form-label col" for="password">Password</label>
             <input class="col form-control " type="password" id="password" placeholder="Enter password">
+            <span class="text-danger" id="passwordError"></span>
         </div>
 
         <input type="submit" class="btn btn-primary"/>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/script.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center">Registration form</h1>
+    <form class="container my-5" action="#" onsubmit="return validate()">
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="name">Name</label>
+            <input class="col form-control " type="text" id="name" placeholder="Enter name">
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form">Gender</label>
+            <div class="col row">
+                <div class="form-check form-check-inline col">
+                    <input class="form-check-input" name="gender" type="radio" name="gender" id="genderMale" value="male">
+                    <label class="form-check-label" for="genderMale">Male</label>
+                </div>
+                <div class="form-check form-check-inline col">
+                    <input class="form-check-input" name="gender" type="radio" name="gender" id="genderFemale"
+                        value="female">
+                    <label class="form-check-label" for="genderFemale">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="languages">Languages</label>
+            <div class="col row">
+
+                <div class="form-check col">
+                    <input class="form-check-input" name="language" type="checkbox" value="" id="french">
+                    <label class="form-check-label" for="tamil">
+                        Tamil
+                    </label>
+                </div>
+    
+                <div class="form-check col">
+                    <input class="form-check-input" name="language" type="checkbox" value="" id="english">
+                    <label class="form-check-label" for="english">
+                        English
+                    </label>
+                </div>
+    
+                <div class="form-check col">
+                    <input class="form-check-input" name="language" type="checkbox" value="" id="hindi">
+                    <label class="form-check-label" for="hindi">
+                        Hindi
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="district">District</label>
+            <select class="form-select col" id="district">
+                <option>Select District</option>
+                <option>District 1</option>
+                <option>District 2</option>
+                <option>District 3</option>
+                <option>District 4</option>
+            </select>
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="address">Address</label>
+            <textarea class="form-control col" id="address" rows="3"></textarea>
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="email">Email address</label>
+            <input class="col form-control " type="email" id="email" placeholder="Enter email">
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="mobile">Mobile Number</label>
+            <input class="col form-control " type="tel" id="mobile" placeholder="Enter mobile number">
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3">
+            <label class="col form" for="username">Username</label>
+            <input class="col form-control " type="text" id="username" placeholder="Enter username">
+        </div>
+
+        <div class="shadow p-3 border rounded row my-3 form-group">
+            <label class="col-form-label col" for="password">Password</label>
+            <input class="col form-control " type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <input type="submit" class="btn btn-primary"/>
+    </form>
+
+    
+</body>
+
+</html>

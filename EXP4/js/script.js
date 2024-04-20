@@ -3,7 +3,7 @@ function validate() {
     let allOk = true;
 
     const name = document.getElementById('name').value;
-    const nameRegex = /^[A-Za-z]+(\s*[A-Za-z]*)*$/;
+    const nameRegex = /^[A-Za-z]+(\s[A-Za-z]*)*$/s;
     if (!name) {
         document.getElementById("nameError").innerHTML = 'Name is required.';
         allOk = false;

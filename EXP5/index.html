@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <script src="./js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container w-50">
+            <div class="container-fluid btn-group">
+                <button name="get" class="btn my-5 btn-primary">Get Method Form</button>
+                <button name="post" class="btn my-5 border-primary text-primary">Post Method Form</button>
+            </div>
+
+            <form name="userForm" action="http://localhost:3001" method="get">
+                
+                <div class="form-floating mb-3">
+                    <input type="text" name="Name" class="form-control" id="floatingName" placeholder="Name" required>
+                    <label for="floatingName">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" name="Email" class="form-control" id="floatingEmail" placeholder="Email Address" required>
+                    <label for="floatingEmail">Email address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="Register Number" class="form-control" id="floatingRegNo" placeholder="Register Number" required>
+                    <label for="floatingRegNo">Register Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select name="Department" class="form-select" id="floatingDepartment">
+                        <option value="" selected>Choose Your Department</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="CSE">Computer Science Engineering</option>
+                        <option value="CSD">Computer Science And Design</option>
+                        <option value="AIML">Artificial Intelligence and Machine Learning</option>
+                        <option value="AIDS">Artificial Intelligence and Data Science</option>
+                    </select>
+                    <label for="floatingDepartment">Department</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" min="1" max="4" name="Year" class="form-control" id="floatingYear" placeholder="Year of Study" required>
+                    <label for="floatingYear">Year of Study</label>
+                </div>
+
+                <input type="submit" class="btn btn-success" value="submit">
+            </form>
+        </div>
+
+        <script src="./js/script.js"></script>
+
+    </body>
+
+</html>

@@ -31,7 +31,7 @@ const getHandler = (req, resp) => {
         </head>
         <body>
             <div class="container">
-                <h1>Passed Data</h1>
+                <h1>Data Passed Using Get Method</h1>
                 <table class="table table-bordered w-50 border-1 border-dark">
                     <tr class="table-active">
                         <th>Key</th>

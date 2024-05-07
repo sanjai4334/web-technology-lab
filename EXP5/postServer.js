@@ -32,13 +32,13 @@ const postHandler = (req, resp) => {
         <!DOCTYPE html>
         <html>
             <head>
-                <title>GET RESPONSE</title>
+                <title>POST RESPONSE</title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
                 <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
             </head>
             <body>
                 <div class="container">
-                    <h1>Passed Data</h1>
+                    <h1>Data Passed Using Post Method</h1>
                     <table class="table table-bordered w-50 border-1 border-dark">
                         <tr class="table-active">
                             <th>Key</th>

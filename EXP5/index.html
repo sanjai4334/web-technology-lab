@@ -22,9 +22,21 @@
                     <label for="floatingName">Name</label>
                 </div>
 
+                <div class="form-control mb-3">
+                    <input type="radio" name="Gender" class="form-check-input" value="Male" id="floatingMale" required>
+                    <label for="floatingMale">Male</label>
+                    <input type="radio" name="Gender" class="form-check-input" value="Female" id="floatingFemale" required>
+                    <label for="floatingFemale">Female</label>
+                </div>
+
                 <div class="form-floating mb-3">
                     <input type="email" name="Email" class="form-control" id="floatingEmail" placeholder="Email Address" required>
                     <label for="floatingEmail">Email address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="tel" name="Phone" class="form-control" id="floatingPhone" placeholder="Year of Study" required>
+                    <label for="floatingPhone">Phone Number</label>
                 </div>
 
                 <div class="form-floating mb-3">
@@ -33,7 +45,7 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <select name="Department" class="form-select" id="floatingDepartment">
+                    <select name="Department" class="form-select" id="floatingDepartment" required>
                         <option value="" selected>Choose Your Department</option>
                         <option value="IT">Information Technology</option>
                         <option value="CSE">Computer Science Engineering</option>
@@ -49,7 +61,7 @@
                     <label for="floatingYear">Year of Study</label>
                 </div>
 
-                <input type="submit" class="btn btn-success" value="submit">
+                <input type="submit" class="btn btn-success" value="Register">
             </form>
         </div>
 

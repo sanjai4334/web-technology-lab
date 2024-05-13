@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <script src="./js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <h1 class="text-center mb-5 mt-3">Registration Form</h1>
+        <div class="container-fluid h-100 w-50 bg-dark-subtle p-4 border rounded ">
+            <form name="userForm" action="" method="post">
+                <div class="form-floating mb-3">
+                    <input type="text" name="Name" class="form-control" id="floatingName" placeholder="Name" required>
+                    <label for="floatingName">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="date" name="DOB" class="form-control" id="floatingDOB" placeholder="Date Of Birth" required>
+                    <label for="floatingDOB">Date Of Birth</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" name="Email" class="form-control" id="floatingEmail" placeholder="Email Address" required>
+                    <label for="floatingEmail">Email address</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="tel" name="Phone" class="form-control" id="floatingPhone" placeholder="Year of Study" required>
+                    <label for="floatingPhone">Phone Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" name="Register Number" class="form-control" id="floatingRegNo" placeholder="Register Number" required>
+                    <label for="floatingRegNo">Register Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select name="Department" class="form-select" id="floatingDepartment" required>
+                        <option value="" selected>Choose Your Department</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="CSE">Computer Science Engineering</option>
+                        <option value="CSD">Computer Science And Design</option>
+                        <option value="AIML">Artificial Intelligence and Machine Learning</option>
+                        <option value="AIDS">Artificial Intelligence and Data Science</option>
+                    </select>
+                    <label for="floatingDepartment">Department</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" min="1" max="4" name="Year" class="form-control" id="floatingYear" placeholder="Year of Study" required>
+                    <label for="floatingYear">Year of Study</label>
+                </div>
+
+                <div class="btn-group w-100 mt-3">
+                    <button onclick="submitAction('insert')" class="btn btn-success" >Insert</button>
+                    <button onclick="submitAction('view')" class="btn btn-warning" >View</button>
+                    <button onclick="submitAction('update')" class="btn btn-primary" >Update</button>
+                    <button onclick="submitAction('delete')" class="btn btn-danger" >Delete</button>
+                </div>
+
+                <script>
+                    function submitAction(path) {
+                        let userForm = document.querySelector('form[name="userForm"]');
+                        
+                        // Reset required attribute for all fields
+                        userForm.querySelectorAll('input, select').forEach(field => {
+                            field.removeAttribute('required');
+                        });
+
+                        // Add required attribute for input fields based on button clicked
+                        switch (path) {
+                            case 'insert':
+                                userForm.querySelectorAll('input, select').forEach(field => {
+                                    field.setAttribute('required', '');
+                                });
+                                break;
+
+                            case 'update':
+                            case 'delete':
+                                userForm.querySelector('input[name="Register Number"]').setAttribute('required', '');
+                                break;                        
+                        }
+
+                        userForm.action = `http://localhost:3001/${path}`;
+                        console.log(userForm.action);
+                        userForm.submit();
+                    }
+                </script>
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -52,7 +52,7 @@ const reqHandler = async (req, res) => {
 
         htmlResponse += "</div>";
 
-        res.writeHead(statusCode, "text/html");
+        res.writeHead(statusCode, { "Content-Type" : "text/html"});
         res.end(htmlResponse);
     });
 };

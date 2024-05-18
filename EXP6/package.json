@@ -1,5 +1,16 @@
 {
   "dependencies": {
-    "mongodb": "^6.6.1"
-  }
+    "mongodb": "^6.6.1",
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "dev":"nodemon server.js",
+    "start": "node server.js"
+  },
+  "name": "exp6",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

@@ -4,23 +4,28 @@
     <div class="form-group">
       <label for="firstName">First Name</label>
       <input type="text" id="firstName" class="form-control" formControlName="firstName">
-      <small class="text-danger" *ngIf="personalInfoForm.get('firstName')?.invalid && (personalInfoForm.get('firstName')?.dirty || personalInfoForm.get('firstName')?.touched)">
+      <small class="text-danger"
+        *ngIf="personalInfoForm.get('firstName')?.invalid && (personalInfoForm.get('firstName')?.dirty || personalInfoForm.get('firstName')?.touched)">
         <span *ngIf="personalInfoForm.get('firstName')?.errors?.['required']">First Name is required.</span>
+        <span *ngIf="personalInfoForm.get('firstName')?.errors?.['pattern']">Invalid First Name.</span>
       </small>
     </div>
 
     <div class="form-group">
       <label for="lastName">Last Name</label>
       <input type="text" id="lastName" class="form-control" formControlName="lastName">
-      <small class="text-danger" *ngIf="personalInfoForm.get('lastName')?.invalid && (personalInfoForm.get('lastName')?.dirty || personalInfoForm.get('lastName')?.touched)">
+      <small class="text-danger"
+        *ngIf="personalInfoForm.get('lastName')?.invalid && (personalInfoForm.get('lastName')?.dirty || personalInfoForm.get('lastName')?.touched)">
         <span *ngIf="personalInfoForm.get('lastName')?.errors?.['required']">Last Name is required.</span>
+        <span *ngIf="personalInfoForm.get('lastName')?.errors?.['pattern']">Invalid Last Name.</span>
       </small>
     </div>
 
     <div class="form-group">
       <label for="dob">Date of Birth</label>
       <input type="date" id="dob" class="form-control" formControlName="dob">
-      <small class="text-danger" *ngIf="personalInfoForm.get('dob')?.invalid && (personalInfoForm.get('dob')?.dirty || personalInfoForm.get('dob')?.touched)">
+      <small class="text-danger"
+        *ngIf="personalInfoForm.get('dob')?.invalid && (personalInfoForm.get('dob')?.dirty || personalInfoForm.get('dob')?.touched)">
         <span *ngIf="personalInfoForm.get('dob')?.errors?.['required']">Date of Birth is required.</span>
       </small>
     </div>
@@ -28,7 +33,8 @@
     <div class="form-group">
       <label for="phoneNumber">Phone Number</label>
       <input type="tel" id="phoneNumber" class="form-control" formControlName="phoneNumber">
-      <small class="text-danger" *ngIf="personalInfoForm.get('phoneNumber')?.invalid && (personalInfoForm.get('phoneNumber')?.dirty || personalInfoForm.get('phoneNumber')?.touched)">
+      <small class="text-danger"
+        *ngIf="personalInfoForm.get('phoneNumber')?.invalid && (personalInfoForm.get('phoneNumber')?.dirty || personalInfoForm.get('phoneNumber')?.touched)">
         <span *ngIf="personalInfoForm.get('phoneNumber')?.errors?.['required']">Phone Number is required.</span>
         <span *ngIf="personalInfoForm.get('phoneNumber')?.errors?.['pattern']">Invalid Phone Number format.</span>
       </small>
@@ -37,7 +43,8 @@
     <div class="form-group">
       <label for="email">Email</label>
       <input type="email" id="email" class="form-control" formControlName="email">
-      <small class="text-danger" *ngIf="personalInfoForm.get('email')?.invalid && (personalInfoForm.get('email')?.dirty || personalInfoForm.get('email')?.touched)">
+      <small class="text-danger"
+        *ngIf="personalInfoForm.get('email')?.invalid && (personalInfoForm.get('email')?.dirty || personalInfoForm.get('email')?.touched)">
         <span *ngIf="personalInfoForm.get('email')?.errors?.['required']">Email is required.</span>
         <span *ngIf="personalInfoForm.get('email')?.errors?.['email']">Invalid Email format.</span>
       </small>
@@ -48,7 +55,8 @@
       <select id="country" class="form-control" formControlName="country">
         <option *ngFor="let country of countries" [value]="country">{{country}}</option>
       </select>
-      <small class="text-danger" *ngIf="personalInfoForm.get('country')?.invalid && (personalInfoForm.get('country')?.dirty || personalInfoForm.get('country')?.touched)">
+      <small class="text-danger"
+        *ngIf="personalInfoForm.get('country')?.invalid && (personalInfoForm.get('country')?.dirty || personalInfoForm.get('country')?.touched)">
         <span *ngIf="personalInfoForm.get('country')?.errors?.['required']">Country is required.</span>
       </small>
     </div>

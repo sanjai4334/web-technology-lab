@@ -1,0 +1,67 @@
+/* Reset default list styles for the navbar */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Adjust spacing between list items */
+li {
+  margin-right: 1rem;
+}
+
+/* Remove default underline from links and set text color */
+a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #000;
+}
+
+/* Style for active link */
+a.active {
+  font-weight: bold;
+}
+
+/* Optional: Override Bootstrap styles for the navbar */
+.navbar {
+  background-color: black; /* Set background color of navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
+  padding: 10px 20px; /* Add padding inside navbar */
+}
+
+/* Style for the navbar brand (logo or text) */
+.navbar-brand {
+  font-size: 1.5rem; /* Increase font size of brand */
+  font-weight: bold; /* Make brand bold */
+  color: white; /* Set text color of brand */
+}
+
+/* Adjust margin between navbar items */
+.navbar-nav .nav-item {
+  padding: 20px;
+  margin-right: 15px; /* Adjust spacing between nav items */
+}
+
+.nav-item:hover {
+  background-color: #333;
+}
+
+/* Style for navbar links */
+.nav-link {
+  color: #fff; /* Set text color of nav links */
+  font-size: 1.2rem; /* Set font size of nav links */
+  transition: color 0.3s ease; /* Add transition for smoother hover effect */
+}
+
+/* Change text color on hover */
+.nav-link:hover {
+  color: #ccc; 
+}
+
+/* Style for active nav link */
+.active {
+  font-weight: bold; /* Make active nav item bold */
+  color: white; /* Set color of active nav item */
+}

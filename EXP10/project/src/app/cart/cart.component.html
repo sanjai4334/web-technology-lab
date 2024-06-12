@@ -1,0 +1,14 @@
+<h1>Cart</h1>
+<div class="container">
+  <div *ngFor="let product of cart">
+    <div class="card">
+      <img [src]="product['imageUrl']" class="img" alt="{{ product.name }}" height="200" width="200">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-price">${{ product.price }}</p>
+          <p class="card-description">{{product['description']}}</p>
+        <button class="card-button" (click)="removeFromCart(product)">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>

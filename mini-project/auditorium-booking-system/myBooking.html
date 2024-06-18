@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <script src="./js/loginRedirectManager.js"></script> <!-- This should always be on top of all other scripts -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/myBooking.js"></script>
+    <style>
+        .booking-card {
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+        .booking-card:hover {
+            transform: scale(1.05);
+        }
+        .status-approved {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .status-rejected {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .status-pending {
+            border-color: #ffc107;
+            background-color: #fff3cd;
+        }
+        .card-title {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="./index.html" class="position-fixed top-0 start-0 m-3"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"/></svg></a>
+        <h1>My Bookings</h1>
+        <div id="myBookingsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mt-4"></div>
+    </div>
+</body>
+</html>

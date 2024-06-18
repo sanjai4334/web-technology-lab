@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auditorium Booking System</title>
+    <script src="./js/loginRedirectManager.js"></script> <!-- This should always be on top of all other scripts -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        #response {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./index.html" class="position-fixed top-0 start-0 m-3"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"/></svg></a>
+        <h1 class="text-center mb-4">Auditorium Booking</h1>
+        <form id="bookingForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="email" class="form-control" id="email" placeholder="Email" disabled>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="date" class="form-control" id="date" placeholder="Date" required>
+                        <label for="date">Date</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="time" class="form-control" id="startTime" placeholder="Start Time" required>
+                        <label for="startTime">Start Time</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="time" class="form-control" id="endTime" placeholder="End Time" required>
+                        <label for="endTime">End Time</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <select class="form-control" id="event" required>
+                            <option value="">Select Event Type</option>
+                            <option value="Lectures and Seminars">Lectures and Seminars</option>
+                            <option value="Conferences and Symposiums">Conferences and Symposiums</option>
+                            <option value="Workshops and Training Sessions">Workshops and Training Sessions</option>
+                            <option value="Drama and Theater Performances">Drama and Theater Performances</option>
+                            <option value="Music and Dance Shows">Music and Dance Shows</option>
+                            <option value="Film Screenings">Film Screenings</option>
+                            <option value="Graduation Ceremonies">Graduation Ceremonies</option>
+                            <option value="Award Ceremonies">Award Ceremonies</option>
+                            <option value="Club Meetings and Events">Club Meetings and Events</option>
+                            <option value="Talent Shows">Talent Shows</option>
+                            <option value="Debates and Quiz Competitions">Debates and Quiz Competitions</option>
+                            <option value="Guest Lectures">Guest Lectures</option>
+                            <option value="Motivational Talks">Motivational Talks</option>
+                            <option value="Orientation Programs">Orientation Programs</option>
+                            <option value="Annual General Meetings">Annual General Meetings</option>
+                            <option value="Social Awareness Programs">Social Awareness Programs</option>
+                            <option value="Health Camps">Health Camps</option>
+                            <option value="Entrance Exams">Entrance Exams</option>
+                            <option value="Internal Assessments">Internal Assessments</option>
+                            <option value="College Festivals">College Festivals</option>
+                            <option value="Inter-College Competitions">Inter-College Competitions</option>
+                            <option value="Job Fairs">Job Fairs</option>
+                            <option value="Alumni Meets">Alumni Meets</option>
+                        </select>
+                        <label for="event">Event Type</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating my-4">
+                        <input type="number" class="form-control" id="attendees" placeholder="Number of Attendees" required>
+                        <label for="attendees">Number of Attendees</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+        </form>
+        <div id="response" class="mt-3"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var emailInput = document.getElementById('email');
+            var userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                emailInput.value = userEmail;
+            }
+
+            var dateInput = document.getElementById('date');
+            var today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+
+            var startTimeInput = document.getElementById('startTime');
+            var endTimeInput = document.getElementById('endTime');
+
+            startTimeInput.addEventListener('change', function() {
+                var startTime = startTimeInput.value;
+                endTimeInput.setAttribute('min', startTime);
+            });
+        });
+    </script>
+</body>
+</html>

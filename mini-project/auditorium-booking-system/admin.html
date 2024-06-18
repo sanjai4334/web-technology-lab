@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script src="./js/loginRedirectManager.js"></script> <!-- This should always be on top of all other scripts -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/admin.js"></script>
+    <style>
+        .booking-card {
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .status-approved {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .status-rejected {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .status-pending {
+            border-color: #ffc107;
+            background-color: #fff3cd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <i onclick="logoutUser()" class="background-transparent position-fixed top-0 start-0 m-3"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8.009 8.009 0 0 1-8 8z"/><path d="M13.293 7.293 8.586 12l4.707 4.707 1.414-1.414L11.414 12l3.293-3.293-1.414-1.414z"/></svg></i>
+        <h1 class="mb-4">Admin Panel</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3" id="bookingsContainer"></div>
+    </div>
+</body>
+</html>
